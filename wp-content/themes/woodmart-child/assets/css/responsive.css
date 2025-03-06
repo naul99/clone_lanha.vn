@@ -1,0 +1,409 @@
+@media only screen and (max-width: 1600px) {
+  /* Variable */
+  :root {
+    --br-gap-container: 60px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  /* Variable */
+  :root {
+    --br-gap-container: 40px;
+  }
+
+  /* Text circle */
+  .title-circle.txt_size_65:before {
+    width: 60px;
+    left: -12px;
+    top: -3px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  /* Variable */
+  :root {
+    --br-size-70: 55px;
+    --br-size-65: 50px;
+    --br-size-50: 40px;
+  }
+
+  /* Text circle */
+  .title-circle.txt_size_65:before {
+    width: 60px;
+    left: -12px;
+    top: -3px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  header .wd-logo img {
+    max-width: 150px !important;
+  }
+  body header .whb-general-header .wd-header-main-nav.wd-inline .wd-nav li > a {
+    font-size: 10px;
+  }
+  .whb-header-bottom .wd-header-main-nav .wd-nav li > a {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  /* Visibility Classes */
+  .hidden-touch-devices {
+    display: none;
+  }
+  .show-touch-devices {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Visibility Classes */
+  .hidden-tablet-h {
+    display: none;
+  }
+  .show-tablet-h {
+    display: block;
+  }
+
+  /**
+     * Menu
+     */
+  body .whb-header-bottom-inner {
+    height: 90px;
+    max-height: 100px;
+  }
+  .wd-header-nav .wd-nav-secondary {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    --nav-gap: 0;
+    margin-top: 5px;
+  }
+  .wd-header-nav .wd-nav-secondary > li > a {
+    display: block;
+    height: auto;
+    text-align: center;
+    font-size: 10px;
+  }
+  .wd-header-nav .wd-nav-secondary > li > a svg,
+  .wd-header-nav .wd-nav-secondary > li > a img {
+    height: 40px;
+    max-width: 35px;
+    max-height: none;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+  .whb-sticked .whb-row.whb-general-header.whb-not-sticky-row {
+    display: block;
+  }
+  .whb-sticked .whb-row.whb-header-bottom.whb-sticky-row {
+    display: none;
+  }
+
+  /* Variable */
+  :root {
+    --br-spacing-140: 120px;
+    --br-spacing-100: 80px;
+    --br-spacing-75: 65px;
+    --br-spacing-55: 50px;
+
+    --br-size-70: 45px;
+    --br-size-65: 40px;
+    --br-size-50: 32px;
+    --br-size-40: 30px;
+    --br-size-30: 25px;
+    --br-size-25: 19px;
+    --br-size-20: 18px;
+
+    --br-gap-container: 15px;
+  }
+
+  /* Text circle */
+  .title-circle.txt_size_65:before {
+    width: 55px;
+    top: -5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wd-header-nav .wd-nav-secondary > li > a svg,
+  .wd-header-nav .wd-nav-secondary > li > a img {
+    max-width: 35px;
+    margin: 0 auto 10px auto;
+  }
+
+  body .scrollToTop {
+    right: 25px;
+  }
+
+  .wpb_text_column:not(.br-custom-table) table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 100% !important;
+  }
+
+  .wpb_text_column:not(.br-custom-table) table tbody {
+    display: table;
+    width: 100%;
+  }
+
+  .br-custom-table table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  /**
+     * Tabs
+     */
+  .br-tabs-with-numbers.vc_tta-tabs.has-icon-image
+    .vc_tta-tabs-list
+    a
+    .vc_tta-title-text {
+    font-size: 14px;
+    white-space: initial;
+  }
+
+  .vc_tta-tabs.has-icon-image:not(.br-tabs-with-numbers)
+    .vc_tta-tabs-list
+    a
+    .vc_tta-panel-image {
+    max-width: 50px;
+  }
+
+  .wpb-js-composer
+    .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs:not(.br-tabs-with-numbers)
+    .vc_tta-tab
+    .vc_tta-title-text {
+    margin-left: 0;
+    font-size: 15px;
+  }
+
+  .wpb-js-composer
+    .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs:not(.br-tabs-with-numbers)
+    .vc_tta-tab
+    > a {
+    padding: 10px;
+  }
+
+  body
+    .vc_tta.vc_general.vc_tta-style-classic:is(.vc_tta-tabs-position-top, .vc_tta-tabs-position-bottom):not(.br-tabs-with-numbers)
+    .vc_tta-tabs-list {
+    overflow: inherit;
+    white-space: unset;
+  }
+
+  .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs:not(.br-tabs-with-numbers)
+    .vc_tta-tabs-container {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  /**
+     * Video
+     */
+  .br-video-opacity {
+    opacity: 1;
+  }
+
+  /**
+     * Footer
+     */
+  footer .widget_nav_menu {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+
+  footer .gform_button {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Variable */
+  :root {
+    --br-spacing-140: 100px;
+    --br-spacing-100: 65px;
+    --br-spacing-55: 40px;
+    --br-spacing-40: 30px;
+
+    --br-size-70: 40px;
+    --br-size-65: 36px;
+  }
+
+  .hide_tablet_v {
+    display: none;
+  }
+  .show_tablet_v {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .vc_row.mobile-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wpb-js-composer
+    .br-tabs-with-numbers.vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs
+    .vc_tta-tab
+    .vc_tta-title-text {
+    display: none;
+  }
+  .br-tabs-with-numbers.vc_tta-tabs.has-icon-image
+    .vc_tta-tabs-list
+    a
+    .vc_tta-panel-image {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /**
+     * Header
+     */
+  header .wd-logo img {
+    max-width: 103px !important;
+  }
+  header .wd-header-search-form-mobile .searchform input[type="text"] {
+    padding-left: 8px;
+    padding-right: 30px;
+    font-size: 11px;
+  }
+  header .searchform.wd-style-with-bg .searchsubmit {
+    width: 32px;
+  }
+  header .searchform .searchsubmit:after {
+    font-size: 15px;
+  }
+
+  /**
+     * Menu
+     */
+  .wd-header-nav .wd-nav-secondary > li > a span {
+    font-size: 10px;
+  }
+
+  body .whb-header-bottom-inner {
+    height: 60px;
+    max-height: 60px;
+  }
+
+  /**
+     * Footer
+     */
+  footer .widget_nav_menu ul li a {
+    font-size: 12px;
+  }
+
+  .br-footer-payments .text-right,
+  .br-footer-payments .wd-social-icons {
+    text-align: center;
+  }
+
+  .br-footer-payments .wd-social-icons {
+    margin-bottom: 20px;
+  }
+
+  /* Tabs */
+  .br-tabs-with-numbers.vc_tta-tabs.has-icon-image
+    .vc_tta-tabs-list
+    a
+    .vc_tta-panel-image {
+    max-width: none;
+    border-width: 2px;
+  }
+
+  .br-tabs-with-numbers.vc_tta-tabs.has-icon-image
+    .vc_tta-tabs-list
+    li
+    a
+    .vc_tta-panel-image::before {
+    font-size: 18px;
+    top: -5px;
+  }
+
+  .br-tabs-with-numbers.vc_tta-tabs.vc_tta-tabs-position-top.vc_tta-o-shape-group
+    .vc_tta-tab:not(:first-child):not(:last-child)
+    > a {
+    padding: 10px 15px;
+  }
+
+  .wpb-js-composer
+    .br-tabs-with-numbers.vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs:not(.br-tabs-with-numbers)
+    .vc_tta-tab
+    > a {
+    padding: 0;
+  }
+  body
+    .vc_tta-tabs.vc_tta-tabs-position-top:not(.br-tabs-with-numbers)
+    .vc_tta-tabs-list {
+    display: block;
+  }
+  .wpb-js-composer
+    .vc_tta.vc_general.vc_tta-style-classic.vc_tta-tabs:not(.br-tabs-with-numbers)
+    .vc_tta-tab
+    .vc_tta-title-text {
+    font-size: 12px;
+  }
+  .vc_tta-tabs.has-icon-image:not(.br-tabs-with-numbers) .vc_tta-tabs-list li {
+    max-width: 20%;
+  }
+
+  /* Variable */
+  :root {
+    --br-spacing-140: 70px;
+    --br-spacing-100: 65px;
+    --br-spacing-75: 60px;
+
+    --br-size-70: 36px;
+    --br-size-65: 32px;
+    --br-size-50: 28px;
+    --br-size-40: 24px;
+    --br-size-30: 20px;
+  }
+
+  .title-circle.txt_size_65:before {
+    width: 40px;
+    top: -3px;
+    left: -8px;
+  }
+  body [class*="button_primary"] {
+    font-size: 16px;
+  }
+  body [class*="button_primary_phone"]:before {
+    font-size: 16px;
+    left: 12px;
+  }
+
+  /* Secondary menu */
+  .wd-header-nav ul.wd-nav-secondary li {
+    width: 25%;
+    padding: 0 5px;
+  }
+  .wd-header-nav .wd-nav-secondary > li > a span {
+    font-size: 9px;
+  }
+  body .whb-header-bottom-inner {
+    height: 80px;
+    max-height: 80px;
+  }
+  body.home .main-page-wrapper {
+    padding-top: 10px;
+  }
+
+  /* class */
+  .show-mobile {
+    display: block;
+  }
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .wd-header-nav .wd-nav-secondary > li > a span {
+    font-size: 8px;
+  }
+}

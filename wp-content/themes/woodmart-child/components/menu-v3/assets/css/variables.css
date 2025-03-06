@@ -1,0 +1,19 @@
+:root {
+  --br-header-height: 153px;
+  --br-header-height-sticky: var(--br-header-height);
+  --br-height-top-menu: 100px;
+  --br-logo-height: 43px;
+
+  --br-mobile-menu-width: 300px;
+}
+@media only screen and (max-width: 1360px) {
+  :root {
+    --br-logo-height: 40px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  :root {
+    --br-header-height: 200px;
+    --br-height-top-menu: 60px;
+  }
+}

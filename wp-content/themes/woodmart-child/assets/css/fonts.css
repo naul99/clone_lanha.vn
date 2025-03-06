@@ -1,0 +1,20 @@
+/***************************************
+
+# Font Import
+
+****************************************/
+/*
+* Font converter: https://transfonter.org/
+*/
+
+/****************************
+ * Primary font
+*****************************/
+@font-face {
+  font-family: "NVN Motherland Signature";
+  src: url("../fonts/subset-NVNMotherlandSignature-Reg.woff2") format("woff2"),
+    url("../fonts/subset-NVNMotherlandSignature-Reg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

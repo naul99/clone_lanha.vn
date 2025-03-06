@@ -1,0 +1,91 @@
+/*********************************************
+ * Home Banner
+**********************************************/
+.br-home-banner-v3__item {
+  width: 100%;
+}
+a.br-home-banner-v3__item-image,
+.br-home-banner-v3,
+.br-home-banner-v3__item {
+  height: calc(var(--br-100vw) * 853 / 1920);
+  max-height: calc(var(--br-100vh) - 153px);
+}
+a.br-home-banner-v3__item-image:before {
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+a.br-home-banner-v3__item-image img {
+  transition: transform 0.3s ease;
+}
+a.br-home-banner-v3__item-image:hover:before {
+  opacity: 1;
+}
+a.br-home-banner-v3__item-image:hover img {
+  transform: scale(1.05);
+}
+
+/* dots */
+body .br-home-banner-v3 .flickity-page-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 2;
+  padding-top: 0;
+  text-align: left;
+  padding: 0 var(--br-gap-side);
+}
+body .br-home-banner-v3.has-1-item .flickity-page-dots {
+  display: none;
+}
+
+/* arrow */
+/*.br-home-banner-v3 .flickity-prev-next-button {*/
+/*    --flkt-bg-hover:#000;*/
+/*    --flkt-color:var(--br-color-primary);*/
+/*    --flkt-color-hover:#fff;*/
+/*}*/
+/*.br-home-banner-v3 .flickity-prev-next-button:before {opacity:0; pointer-events:none;}*/
+/*.br-home-banner-v3 .flickity-prev-next-button svg {*/
+/*    display:block; width:40%; height:40%; opacity:0;*/
+/*    top:50%; left:50%; transform:translate(-50%, -50%);*/
+/*    transition:opacity .3s ease;*/
+/*}*/
+/*.br-home-banner-v3:hover .flickity-prev-next-button svg {opacity:1;}*/
+
+/* Remove spacing top for first element */
+.main-page-wrapper
+  section.wpb-content-wrapper
+  > .vc_row:first-child:has(.br-home-banner-v3) {
+  margin-top: -35px;
+}
+
+/*********************************************
+ * Home Banner Responsive
+**********************************************/
+@media only screen and (max-width: 1024px) {
+  /* hide arrow */
+  /*.br-home-banner-v3 .flickity-prev-next-button {display:none;}*/
+}
+@media only screen and (max-width: 767px) {
+  .main-page-wrapper
+    section.wpb-content-wrapper
+    > .vc_row:first-child:has(.br-home-banner-v3) {
+    margin-top: -30px;
+  }
+  /* show mobile image */
+  a.br-home-banner-v3__item-image.has-mobile-image img {
+    display: none;
+  }
+  a.br-home-banner-v3__item-image.has-mobile-image
+    img.br-home-banner-v3__item-mobile {
+    display: block;
+  }
+
+  /* dots */
+  body .br-home-banner-v3 .flickity-page-dots {
+    bottom: 10px;
+  }
+}

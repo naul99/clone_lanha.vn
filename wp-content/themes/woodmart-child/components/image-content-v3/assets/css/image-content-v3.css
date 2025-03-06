@@ -1,0 +1,97 @@
+/*********************************************
+ * Image with Content
+**********************************************/
+/* General */
+.br-image-content-v3 {
+  padding-left: var(--br-gap-side);
+  padding-right: var(--br-gap-side);
+  background: #fffae8;
+}
+.br-image-content-v3:before {
+  content: "";
+  z-index: 1;
+  width: 1096px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    113% 176% at -13% 67%,
+    rgba(255, 212, 67, 0) 0%,
+    #ffd443 100%
+  );
+  position: absolute;
+  bottom: 60px;
+  left: 52.5%;
+}
+.br-image-content-v3__inner {
+  z-index: 2;
+}
+
+.br-image-content-v3__col {
+  padding-top: 50px;
+}
+.br-image-content-v3__col.image {
+  width: 57%;
+}
+.br-image-content-v3__col.image img {
+  width: 100%;
+}
+.br-image-content-v3__col.content {
+  width: 43%;
+  padding-right: 40px;
+  padding-bottom: 50px;
+}
+
+/* content */
+.br-image-content-v3__content {
+  --wd-tags-mb: 25px;
+  color: #414549;
+  font-size: 16px;
+}
+.br-image-content-v3__content p:last-child:has(a) {
+  padding-top: 15px;
+}
+
+/*********************************************
+ * Responsive
+**********************************************/
+@media only screen and (max-width: 920px) {
+  .br-image-content-v3:before {
+    width: 200vw;
+    top: 60%;
+    right: auto;
+    left: 50%;
+    bottom: auto;
+    transform: translateX(-50%) rotate(135deg);
+  }
+  .br-image-content-v3__inner {
+    flex-direction: column;
+  }
+  .br-image-content-v3__col.image,
+  .br-image-content-v3__col.content {
+    width: 100%;
+  }
+
+  .br-image-content-v3__col.image {
+    padding-top: 0;
+  }
+
+  .br-image-content-v3__col.content {
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* content */
+  .br-image-content-v3__content p:last-child:has(a) {
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .br-image-content-v3:before {
+    top: 75%;
+  }
+}

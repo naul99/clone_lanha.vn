@@ -1,0 +1,124 @@
+/****************************
+ * Sticky Buttons
+****************************/
+.br-sticky-buttons {
+  --size: 40px;
+  --shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  transform: translateY(-50%);
+  background: #000;
+  padding: 10px !important;
+  border-radius: 30px 0 0 30px;
+}
+.br-sticky-buttons:before,
+.br-sticky-buttons:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 60px;
+  pointer-events: none;
+}
+.br-sticky-buttons:before {
+  top: -30px;
+  border-radius: 0 0 50px 0;
+  box-shadow: 30px 1px 0 0 #000;
+}
+.br-sticky-buttons:after {
+  bottom: -30px;
+  border-radius: 0 50px 0 0;
+  box-shadow: 30px -1px 0 0 #000;
+}
+
+.br-sticky-buttons__item {
+  width: var(--size);
+  aspect-ratio: 1;
+}
+
+/* button */
+.br-sticky-buttons a {
+  text-decoration: none;
+  border-radius: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+.br-sticky-buttons a[title="Hotline"] {
+  animation: animate 1.5s ease infinite;
+}
+.br-sticky-buttons a[title="Hotline"] .br-sticky-buttons__item-image {
+  padding: 7px;
+}
+
+/* icon */
+.br-sticky-buttons__item-image {
+  width: var(--size);
+  height: var(--size);
+  background: rgba(0, 0, 0, 0);
+}
+
+/* text */
+.br-sticky-buttons__item-text {
+  padding: 5px 25px 5px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+  }
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+  }
+}
+
+/* Hide FB chat plugin */
+.fb_reset {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/****************************
+ * Sticky Buttons Responsive
+****************************/
+@media only screen and (max-width: 480px) {
+  .br-sticky-buttons {
+    padding: 5px !important;
+    border-radius: 20px 0 0 20px;
+  }
+  .br-sticky-buttons:before,
+  .br-sticky-buttons:after {
+    width: 50px;
+  }
+  .br-sticky-buttons:before {
+    box-shadow: 20px 1px 0 0 #000;
+  }
+  .br-sticky-buttons:after {
+    box-shadow: 20px -1px 0 0 #000;
+  }
+}

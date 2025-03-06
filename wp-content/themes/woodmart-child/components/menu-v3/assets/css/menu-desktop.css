@@ -1,0 +1,224 @@
+/****************************
+ * Menu > Common
+****************************/
+/* clear list style */
+.desktop-menu ul {
+  list-style: none;
+  margin: 0;
+}
+.desktop-menu ul > li {
+  --li-mb: 0px;
+  padding: 0;
+  position: relative;
+}
+.desktop-menu ul > li > a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #565e64;
+}
+
+/* hover */
+.desktop-menu ul > li > a:hover,
+.desktop-menu ul > li > a:focus,
+.desktop-menu ul > li[class*="current"] > a {
+  color: var(--br-color-primary);
+}
+
+/* hide unused submenus */
+.desktop-menu ul.sub-menu ul.sub-menu ul.sub-menu {
+  display: none;
+}
+
+/* show/hide submenu */
+.desktop-menu li:not(:hover) > ul.sub-menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* submenu animation (search submenuAnimationDelay to edit stagger time) */
+.desktop-menu li[class*="has-child"]:hover > ul.sub-menu > li {
+  animation: slide-fade-in 0.4s ease forwards;
+  opacity: 0;
+}
+@keyframes slide-fade-in {
+  0% {
+    transform: translate(-15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+/* has submenu arrow */
+.desktop-menu ul > li[class*="has-child"] > a {
+  position: relative;
+  padding-right: 22px;
+}
+.desktop-menu ul > li[class*="has-child"] > a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 5px solid #565e64;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+.desktop-menu li[class*="has-child"].active > a:after,
+.desktop-menu li[class*="has-child"]:hover > a:after {
+  transform: translateY(-50%) rotate(180deg);
+  border-top-color: var(--br-color-primary);
+}
+
+/* a11y */
+.desktop-menu ul.menu > li > a:focus-visible {
+  outline: 2px solid var(--br-color-primary);
+  border-radius: 3px;
+  text-decoration: none;
+  background: transparent;
+  color: var(--br-color-primary);
+  transition: none;
+}
+
+/****************************
+ * Menu > Lv1
+****************************/
+.desktop-menu ul.menu {
+  display: flex;
+  gap: 0 30px;
+  padding: 0;
+}
+
+.desktop-menu ul.menu > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/****************************
+ * Menu > Lv2
+****************************/
+.desktop-menu ul.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  z-index: 2;
+  min-width: calc(100% + 40px);
+  max-width: 300px;
+  padding: 4px 0;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  transition: var(--br-transition);
+}
+.desktop-menu ul.sub-menu > li:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+}
+.desktop-menu ul.sub-menu > li > a {
+  display: block;
+  padding: 8px 20px;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* pointer */
+.desktop-menu ul.sub-menu:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #fff;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* placeholder for pointer icon */
+.desktop-menu ul.sub-menu:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  right: 0;
+  height: 10px;
+}
+
+/* has submenu arrow */
+.desktop-menu ul.sub-menu > li[class*="has-child"] > a {
+  padding-right: 40px;
+}
+.desktop-menu ul.sub-menu > li[class*="has-child"] > a:after {
+  right: 15px;
+}
+.desktop-menu ul.sub-menu > li[class*="has-child"]:hover > a:after {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/****************************
+ * Menu > Lv3
+****************************/
+.desktop-menu ul.sub-menu ul.sub-menu {
+  left: 100%;
+  top: 0;
+  margin-left: 10px;
+  margin-top: 0;
+  min-width: 200px;
+  max-width: unset;
+  columns: 2;
+  --webkit-columns: 2;
+  padding: 12px 20px;
+}
+.desktop-menu ul.sub-menu ul.sub-menu > li > a {
+  padding: 8px 0;
+}
+.desktop-menu ul.sub-menu ul.sub-menu > li:last-child {
+  border-bottom: 1px solid #efefef;
+}
+
+/* pointer */
+.desktop-menu ul.sub-menu ul.sub-menu:before {
+  right: 100%;
+  top: 15px;
+  left: auto;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  filter: drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* placeholder for pointer icon */
+.desktop-menu ul.sub-menu ul.sub-menu:after {
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: auto;
+  width: 10px;
+  height: auto;
+}
+
+/* Hide search button */
+.br-search-button {
+  display: none;
+}
+
+/****************************
+ * Menu Responsive
+****************************/
+@media only screen and (max-width: 1380px) {
+  .desktop-menu ul.menu {
+    gap: 0 25px;
+  }
+}

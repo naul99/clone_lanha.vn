@@ -1,0 +1,105 @@
+/****************************
+ * Fancybox Custom CSS
+*****************************/
+/* fix layout shift */
+body.compensate-for-scrollbar {
+  margin-right: 0 !important;
+  overflow: visible !important;
+}
+
+/* buttons close */
+body .fancybox-toolbar .fancybox-button {
+  background: #000;
+  transition: var(--br-transition);
+}
+body .fancybox-toolbar .fancybox-button:hover {
+  background: var(--br-color-primary);
+}
+body .fancybox-toolbar .fancybox-button path {
+  fill: #fff;
+}
+
+/* buttons navigation */
+body .fancybox-navigation .fancybox-button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+/*body .fancybox-navigation .fancybox-button svg {display:none;}*/
+body .fancybox-navigation .fancybox-button:hover div {
+  background: var(--br-color-primary);
+}
+.fancybox-show-nav .fancybox-navigation .fancybox-button:hover {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
+body .fancybox-navigation .fancybox-button div {
+  position: relative;
+  transition: var(--br-transition);
+  background: #000;
+}
+/*body .fancybox-navigation .fancybox-button div:before {*/
+/*    font-family:vc_material; color:#fff;*/
+/*    position:absolute; top:50%; left:50%;*/
+/*    transform:translate(-50%, -50%);*/
+/*}*/
+/*body .fancybox-navigation .fancybox-button--arrow_left div:before {content:"\e314"; padding-right:.15em;}*/
+/*body .fancybox-navigation .fancybox-button--arrow_right div:before {content:"\e315"; padding-left:.15em;}*/
+
+/* Fancybox Video */
+body .fancybox-slide.fancybox-slide--video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fancybox HTML > Text */
+body .fancybox-slide.fancybox-slide--html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .fancybox-slide.fancybox-slide--html:before {
+  display: none;
+}
+body .fancybox-slide.fancybox-slide--html .fancybox-content {
+  max-width: 1280px !important;
+  position: relative;
+  overflow: visible;
+  margin: 45px 0;
+  padding: 45px;
+}
+
+/* Fancybox HTML > Map */
+body .fancybox-slide.fancybox-slide--html .fancybox-content.fancybox-map {
+  max-width: 1024px !important;
+  width: 100vw;
+  height: 70vh;
+  max-height: 600px;
+  padding: 0;
+}
+body .fancybox-map.fancybox-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/****************************
+ * Fancybox Custom CSS Responsive
+*****************************/
+@media only screen and (max-width: 1024px) {
+  /* Fancybox Video */
+  body .fancybox-slide.fancybox-slide--video {
+    padding: 20px;
+  }
+
+  /* Fancybox HTML > Text */
+  body .fancybox-slide.fancybox-slide--html .fancybox-content {
+    padding: 20px;
+  }
+}
+
+/* fix fading effect */
+/*
+body .fancybox-slide--image {transition:all .3s ease;}
+body .fancybox-slide--image:not(.fancybox-slide--current) {opacity:0; visibility:hidden;}
+*/

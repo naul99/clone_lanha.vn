@@ -1,0 +1,75 @@
+/*********************************************
+ * Project Grid
+**********************************************/
+.br-project-grid-v3__content {
+  --wd-title-color: #414549;
+  font-size: 20px;
+  font-weight: 500;
+  color: #565e64;
+}
+
+/* grid */
+.br-project-grid-v3__items {
+  --grid-gap-x: 16px;
+  --grid-gap-y: 16px;
+}
+
+/* item */
+.br-project-grid-v3__thumbnail-bg {
+  aspect-ratio: 416/260;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.br-project-grid-v3__thumbnail-bg:before {
+  background: linear-gradient(
+    180deg,
+    rgba(29, 29, 31, 0.1) 0%,
+    rgba(29, 29, 31, 0.8) 100%
+  );
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.br-project-grid-v3__title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%);
+  z-index: 1;
+  padding: 15px;
+  text-align: center;
+  opacity: 0;
+  margin-bottom: 0;
+  color: #fff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* hover */
+a.br-project-grid-v3__inner:hover .br-project-grid-v3__thumbnail-bg:before {
+  opacity: 1;
+}
+a.br-project-grid-v3__inner:hover .br-project-grid-v3__title {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+/* button */
+.br-project-grid-v3__button {
+  padding-top: 24px;
+  text-align: center;
+}
+
+/*********************************************
+ * Project Grid Responsive
+**********************************************/
+@media only screen and (max-width: 768px) {
+  .br-project-grid-v3__content {
+    --wd-tags-mb: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .br-project-grid-v3__content .txt_heading_dot {
+    font-size: 24px;
+  }
+}
