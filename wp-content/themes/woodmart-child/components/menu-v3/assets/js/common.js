@@ -85,10 +85,10 @@ BRISE.mobileMenuAccordion = ({
         className: "menu-item-arrow",
       });
       if (isButtonInsideLink && isEmptyLink) {
-        button.innerHTML = `<button class="menu-item-arrow__button t"><i class="icon-chevron-down"></i></button>`;
+        button.innerHTML = `<button class="menu-item-arrow__button t"><i class="fa-solid fa-chevron-down"></i></button>`;
         a.setAttribute(triggerAttr, li_id);
       } else {
-        button.innerHTML = `<button class="menu-item-arrow__button t" ${triggerAttr}="${li_id}"><i class="icon-chevron-down"></i></button>`;
+        button.innerHTML = `<button class="menu-item-arrow__button t" ${triggerAttr}="${li_id}"><i class="fa-solid fa-chevron-down"></i></button>`;
       }
 
       // place button

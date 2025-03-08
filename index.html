@@ -554,8 +554,8 @@ check_webp_feature("alpha", ewwwWebPInit);
   <meta property="og:image:type" content="image/jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome-ie7.css" integrity="sha512-Gyaty1w59WIaT5TGSbAHuVHOoayE3p1R9rWHMDY/RFLRBTsB07rdrKsy4lB5kyajKXsbbuEj3FAoNKiyrm5E0Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" id="js_composer_front-css"
     href="/wp-content/plugins/js_composer/assets/css/js_composer.min.css" media="all" />
   <link rel="stylesheet" id="br-fonts-css"
@@ -1150,8 +1150,26 @@ check_webp_feature("alpha", ewwwWebPInit);
                 <input type="text" class="s" placeholder="Nhập từ khóa" value="" name="s" aria-label="Search"
                   title="Nhập từ khóa" required />
                 <input type="hidden" name="post_type" value="post" />
-                <button type="submit" class="searchsubmit">
-                  <span> Search </span>
+                <style>
+                  .search{
+                    position: absolute;
+                    top: 0;
+                    right: 2px;
+                    bottom: 0;
+                    padding: 0;
+                    width: 50px;
+                    border: none;
+                    background-color: transparent;
+                    box-shadow: none;
+                    color: #ffc91b;
+                    font-weight: 400;                    
+                    left: 5px;
+                    right: auto;
+                  }
+                </style>
+                <button type="submit" class="search">
+                  <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                  <!-- <span> Search </span> -->
                 </button>
               </form>
             </div>
@@ -1812,8 +1830,26 @@ check_webp_feature("alpha", ewwwWebPInit);
               <input type="text" class="s" placeholder="Nhập từ khóa" value="" name="s" aria-label="Search"
                 title="Nhập từ khóa" required />
               <input type="hidden" name="post_type" value="post" />
-              <button type="submit" class="searchsubmit">
-                <span> Search </span>
+              <style>
+                .search-mb{
+                  position: absolute;
+                  top: 0;
+                  right: 2px;
+                  bottom: 0;
+                  padding: 0;
+                  width: 50px;
+                  border: none;
+                  background-color: transparent;
+                  box-shadow: none;
+                  color: #868686;
+                  font-weight: 400;                    
+                  left: auto;
+                  right: 0;
+                }
+              </style>
+              <button type="submit" class="search-mb">
+                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                <!-- <span> Search </span> -->
               </button>
             </form>
           </div>
